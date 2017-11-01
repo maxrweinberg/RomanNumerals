@@ -7,19 +7,19 @@ import kotlin.test.assertEquals
 
 class TestSource() {
     @Test fun megaTest() {
-        assertEquals(toRomanNumeral(1), "I")
-        assertEquals(toRomanNumeral(14), "XIV")
-        assertEquals(toRomanNumeral(321), "CCCXXI")
-        assertEquals(toRomanNumeral(3999), "MMMCMXCIX")
-        assertEquals(toRomanNumeral(1490), "MCDXC")
-        assertEquals(toRomanNumeral(40), "XL")
-        assertEquals(toRomanNumeral(95), "XCV")
-        assertEquals(toInteger("I"), 1)
-        assertEquals(toInteger("XIV"), 14)
-        assertEquals(toInteger("CCCXXI"), 321)
-        assertEquals(toInteger("MMMCMXCIX"), 3999)
-        assertEquals(toInteger("MCDXC"), 1490)
-        assertEquals(toInteger("XL"), 40)
-        assertEquals(toInteger("XCV"), 95)
+        assertEquals(1.toRomanNumeral(), "I")
+        assertEquals(14.toRomanNumeral(), "XIV")
+        assertEquals(321.toRomanNumeral(), "CCCXXI")
+        assertEquals(3999.toRomanNumeral(), "MMMCMXCIX")
+        assertEquals(1490.toRomanNumeral(), "MCDXC")
+        assertEquals(40.toRomanNumeral(), "XL")
+        assertEquals(95.toRomanNumeral(), "XCV")
+        assertEquals("I".romanToInteger(), 1)
+        assertEquals("XIV".romanToInteger(), 14)
+        assertEquals("CCCXXI".romanToInteger(), 321)
+        assertEquals("MMMCMXCIX".romanToInteger(), 3999)
+        assertEquals("MCDXC".romanToInteger(), 1490)
+        assertEquals("XL".romanToInteger(), 40)
+        assertEquals("XCV".romanToInteger(), 95)
     }
 }
