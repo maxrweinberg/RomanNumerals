@@ -19,9 +19,9 @@ fun String.romanToInteger(): Int {
     var integer = 0
     var romanInProcess = this
     while (romanInProcess.isNotEmpty()) {
-        val smallestApplicable = romanList.findLast { romanInProcess.startsWith(it.second) } ?: Pair(1, "I")
-        integer += smallestApplicable.first
-        romanInProcess = romanInProcess.removeRange(0, smallestApplicable.second.length)
+        val biggestApplicable = romanList.findLast { romanInProcess.startsWith(it.second) } ?: Pair(1, "I")
+        integer += biggestApplicable.first
+        romanInProcess = romanInProcess.removeRange(0, biggestApplicable.second.length)
     }
     return integer
 }
